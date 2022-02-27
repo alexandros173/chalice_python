@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::576262803316:role/genesis-dev",
+      "role_name": "genesis-dev"
+    },
+    {
+      "name": "handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ca-central-1:576262803316:function:genesis-dev-handler"
+    },
+    {
+      "name": "handler-sqs-event-source",
+      "resource_type": "sqs_event",
+      "queue_arn": "arn:aws:sqs:ca-central-1:576262803316:the-genesis-queue",
+      "event_uuid": "41653896-54ac-4ed1-9572-959e88c80192",
+      "queue": "the-genesis-queue",
+      "lambda_arn": "arn:aws:lambda:ca-central-1:576262803316:function:genesis-dev-handler"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ca-central-1:576262803316:function:genesis-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "4vqkca5y5f",
+      "rest_api_url": "https://4vqkca5y5f.execute-api.ca-central-1.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
